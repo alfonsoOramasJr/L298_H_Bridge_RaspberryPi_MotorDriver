@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 
+GPIO.setmode(GPIO.BCM)
+
 class MotorDriver:
     def __init__(self, pwm_pin, forward_direction_pin, backward_direction_pin):
         GPIO.setup([pwm_pin, forward_direction_pin, backward_direction_pin], GPIO.OUT)
